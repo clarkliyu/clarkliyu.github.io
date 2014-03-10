@@ -2,8 +2,8 @@ var game = {
   data: {
     score : 0,
     steps: 0,
-    start: false,
-    newHiScore: false
+    start: !1,
+    newHiScore: !1
   },
 
   "onload": function() {
@@ -345,7 +345,7 @@ var BackgroundLayer = me.ImageLayer.extend({
   }
 });
 
-var Share = me.GUI_Object.extend({
+/* var Share = me.GUI_Object.extend({
   init: function() {
     var settings = {};
     var x = me.video.getWidth()/2 - 170;
@@ -395,7 +395,7 @@ var Tweet = me.GUI_Object.extend({
     return false;
   }
 
-});
+});  */
 
 game.TitleScreen = me.ScreenObject.extend({
   init: function(){
@@ -572,8 +572,8 @@ game.GameOverScreen = me.ScreenObject.extend({
     me.game.world.addChild(this.share, 12);
 
     //tweet button
-    this.tweet = new Tweet();
-    me.game.world.addChild(this.tweet, 12);
+//    this.tweet = new Tweet();
+//    me.game.world.addChild(this.tweet, 12);
 
     // add the dialog witht he game information
     if (game.data.newHiScore) {
